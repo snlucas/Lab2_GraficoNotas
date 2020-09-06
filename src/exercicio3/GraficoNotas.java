@@ -47,10 +47,8 @@ public class GraficoNotas {
         organizaArrayNotas(notas.getValores());
     }
 
-    public void desenhaGraficoVertical() {}
-
     public void desenhaGraficoHorizontal() {
-        System.out.println("====== Grafico de notas ======");
+        System.out.println("\n\n====== Grafico de notas ======");
         System.out.println("\tFormato horizontal");
         System.out.print("\n00-09: " + desenhaPontos(notas0A9));
         System.out.print("\n10-19: " + desenhaPontos(notas10A19));
@@ -63,6 +61,7 @@ public class GraficoNotas {
         System.out.print("\n80-89: " + desenhaPontos(notas80A89));
         System.out.print("\n90-99: " + desenhaPontos(notas90A99));
         System.out.print("\n  100: " + desenhaPontos(notas100));
+        System.out.println("\n");
     }
 
     public String desenhaPontos(double[] array) {
