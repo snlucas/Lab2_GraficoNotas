@@ -5,7 +5,15 @@ import java.util.Scanner;
 public class Notas {
     private final int ARRAY_CAPACIDADE_MAX = 300;
     private double[] valores;
-    
+
+    public Notas() {
+        this.valores = new double[ARRAY_CAPACIDADE_MAX];
+
+        // "reseta" indices dos arrays, para q nao iniciem com "0"
+        for (int i = 0; i < ARRAY_CAPACIDADE_MAX; i++)
+            this.valores[i] = -1;
+    }
+
     public Notas(int capacidade) {
         this.valores = new double[capacidade];
 
@@ -14,12 +22,11 @@ public class Notas {
             this.valores[i] = -1;
     }
 
-    public Notas() {
-        this.valores = new double[ARRAY_CAPACIDADE_MAX];
+    public Notas(double[] array) {
+        this.valores = new double[array.length];
 
-        // "reseta" indices dos arrays, para q nao iniciem com "0"
-        for (int i = 0; i < ARRAY_CAPACIDADE_MAX; i++)
-            this.valores[i] = -1;
+        for (int i = 0; i < array.length; i++)
+            this.valores[i] = array[i];
     }
 
     public void addValor(double valor) {
